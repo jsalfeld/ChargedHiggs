@@ -34,7 +34,7 @@ class Jet : virtual public Object
     }
     inline int IsBJet(){ if( bdiscr > bcut_ + bsyst*bunc and IsJet() )   return 1; return 0;}
 
-    inline void computeValidity( Object* o, float dR = 0.4)
+    inline void computeValidity( Object* o, float dR = 0.0)
     {
         if ( DeltaR (*o) < dR )  isValid = 0;
     }
